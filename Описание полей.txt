@@ -294,3 +294,26 @@ JSON с полями
    ]
 }
 //--
+
+
+//++
+Метод getReconciliationAct, запрашивается из Zooman.
+Params - структура с ключем "method" и значением ключа "getReconciliationAct".
+Authorization - username и password
+
+Тело метода: 
+JSON с полями
+	claim - ассоциативный массив с полями
+		Client - guid 1c Контрагента
+		DateStart - дата начала формирования акта сверки
+		DateEnd - дата окончания формирования акта сверки
+
+Ответ: двоичные данные файла акта сверки в теле ответа.
+
+Пример:
+{
+    "Client":"f305e0f3-5cc6-11ec-ab81-00155d704701",
+    "DateStart":"2023-01-01",
+    "DateEnd":"2023-03-31"
+}
+//--
